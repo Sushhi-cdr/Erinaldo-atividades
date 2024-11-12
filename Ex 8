@@ -1,0 +1,31 @@
+algoritmo "semnome"
+var
+   livros:VETOR[1.. 3, 1.. 12]de inteiro
+   l:VETOR[1.. 3, 1.. 12]de inteiro
+   x,y,maior,m:inteiro
+   
+funcao maiorquant(m:inteiro):inteiro
+inicio
+      se l[x,y] > m entao
+             m <- l[x,y]
+             retorne m
+        senao
+        fimse
+fimfuncao
+
+inicio
+maior <- livros[1,1]
+   para x de 1 ate 3 faca
+        para y de 1 ate 12 faca
+        escreva("Mes",y,":")
+        leia(livros[x,y])
+        //se livros[x,y] > maior entao
+            // maior <- livros[x,y]
+        //senao
+        //fimse
+        m <- maiorquant(livros[x,y])
+   fimpara
+fimpara
+
+escreva("A maior quant. de livros vendidos foi:",m)
+fimalgoritmo
