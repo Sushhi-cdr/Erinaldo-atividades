@@ -1,0 +1,31 @@
+algoritmo "semnome"
+var
+   saldo:VETOR[1.. 3, 1.. 12]de inteiro
+   s:VETOR[1.. 3, 1.. 12]de inteiro
+   x,y,positivo,p:inteiro
+
+funcao saldopositivo(p:inteiro):inteiro
+inicio
+      se s[x,y] > 0 entao
+             p <- p +1
+             retorne p
+        senao
+        fimse
+fimfuncao
+
+inicio
+positivo <- saldo[1,1]
+para y de 1 ate 12 faca
+   para x de 1 ate 3 faca
+        escreva("agencia",y,":")
+        leia(saldo[x,y])
+        //se livros[x,y] > maior entao
+            // maior <- livros[x,y]
+        //senao
+        //fimse
+        p <- saldopositivo(saldo[x,y])
+   fimpara
+fimpara
+
+escreva("saldo positivo:",p)
+fimalgoritmo
